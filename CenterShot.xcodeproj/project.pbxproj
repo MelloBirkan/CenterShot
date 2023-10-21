@@ -11,7 +11,19 @@
 		1B7011AD2AD8F0E300ED7C94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7011AC2AD8F0E300ED7C94 /* ContentView.swift */; };
 		1B7011AF2AD8F0E400ED7C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7011AE2AD8F0E400ED7C94 /* Assets.xcassets */; };
 		1B7011B22AD8F0E400ED7C94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7011B12AD8F0E400ED7C94 /* Preview Assets.xcassets */; };
+		1BBC86832AE3649500917C2B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC86822AE3649500917C2B /* Game.swift */; };
+		1BBC868B2AE36CE800917C2B /* CenterShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBC868A2AE36CE800917C2B /* CenterShotTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1BBC868C2AE36CE800917C2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B70119F2AD8F0E300ED7C94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B7011A62AD8F0E300ED7C94;
+			remoteInfo = CenterShot;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B7011A72AD8F0E300ED7C94 /* CenterShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenterShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +31,20 @@
 		1B7011AC2AD8F0E300ED7C94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B7011AE2AD8F0E400ED7C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7011B12AD8F0E400ED7C94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1BBC86822AE3649500917C2B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1BBC86882AE36CE800917C2B /* CenterShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenterShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBC868A2AE36CE800917C2B /* CenterShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterShotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B7011A42AD8F0E300ED7C94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BBC86852AE36CE800917C2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7011A92AD8F0E300ED7C94 /* CenterShot */,
+				1BBC86892AE36CE800917C2B /* CenterShotTests */,
 				1B7011A82AD8F0E300ED7C94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1B7011A72AD8F0E300ED7C94 /* CenterShot.app */,
+				1BBC86882AE36CE800917C2B /* CenterShotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +75,9 @@
 		1B7011A92AD8F0E300ED7C94 /* CenterShot */ = {
 			isa = PBXGroup;
 			children = (
-				1B7011AA2AD8F0E300ED7C94 /* CenterShotApp.swift */,
-				1B7011AC2AD8F0E300ED7C94 /* ContentView.swift */,
-				1B7011AE2AD8F0E400ED7C94 /* Assets.xcassets */,
+				1BBC86812AE3646500917C2B /* App */,
+				1BBC86802AE3642900917C2B /* Views */,
+				1BBC867F2AE3641200917C2B /* Models */,
 				1B7011B02AD8F0E400ED7C94 /* Preview Content */,
 			);
 			path = CenterShot;
@@ -65,6 +89,39 @@
 				1B7011B12AD8F0E400ED7C94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1BBC867F2AE3641200917C2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC86822AE3649500917C2B /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BBC86802AE3642900917C2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B7011AC2AD8F0E300ED7C94 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1BBC86812AE3646500917C2B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1B7011AA2AD8F0E300ED7C94 /* CenterShotApp.swift */,
+				1B7011AE2AD8F0E400ED7C94 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1BBC86892AE36CE800917C2B /* CenterShotTests */ = {
+			isa = PBXGroup;
+			children = (
+				1BBC868A2AE36CE800917C2B /* CenterShotTests.swift */,
+			);
+			path = CenterShotTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +144,24 @@
 			productReference = 1B7011A72AD8F0E300ED7C94 /* CenterShot.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1BBC86872AE36CE800917C2B /* CenterShotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BBC868E2AE36CE800917C2B /* Build configuration list for PBXNativeTarget "CenterShotTests" */;
+			buildPhases = (
+				1BBC86842AE36CE800917C2B /* Sources */,
+				1BBC86852AE36CE800917C2B /* Frameworks */,
+				1BBC86862AE36CE800917C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BBC868D2AE36CE800917C2B /* PBXTargetDependency */,
+			);
+			name = CenterShotTests;
+			productName = CenterShotTests;
+			productReference = 1BBC86882AE36CE800917C2B /* CenterShotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +174,10 @@
 				TargetAttributes = {
 					1B7011A62AD8F0E300ED7C94 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					1BBC86872AE36CE800917C2B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 1B7011A62AD8F0E300ED7C94;
 					};
 				};
 			};
@@ -116,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				1B7011A62AD8F0E300ED7C94 /* CenterShot */,
+				1BBC86872AE36CE800917C2B /* CenterShotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +210,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BBC86862AE36CE800917C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +225,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7011AD2AD8F0E300ED7C94 /* ContentView.swift in Sources */,
+				1BBC86832AE3649500917C2B /* Game.swift in Sources */,
 				1B7011AB2AD8F0E300ED7C94 /* CenterShotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BBC86842AE36CE800917C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BBC868B2AE36CE800917C2B /* CenterShotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BBC868D2AE36CE800917C2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B7011A62AD8F0E300ED7C94 /* CenterShot */;
+			targetProxy = 1BBC868C2AE36CE800917C2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1B7011B32AD8F0E400ED7C94 /* Debug */ = {
@@ -322,6 +426,50 @@
 			};
 			name = Release;
 		};
+		1BBC868F2AE36CE800917C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGPC7U357H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.EvenB.CenterShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenterShot.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CenterShot";
+			};
+			name = Debug;
+		};
+		1BBC86902AE36CE800917C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PGPC7U357H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.EvenB.CenterShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenterShot.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CenterShot";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +487,15 @@
 			buildConfigurations = (
 				1B7011B62AD8F0E400ED7C94 /* Debug */,
 				1B7011B72AD8F0E400ED7C94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BBC868E2AE36CE800917C2B /* Build configuration list for PBXNativeTarget "CenterShotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BBC868F2AE36CE800917C2B /* Debug */,
+				1BBC86902AE36CE800917C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
