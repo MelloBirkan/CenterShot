@@ -43,7 +43,8 @@ struct ContentView: View {
           }
         },
         message: {
-          Text("The value is: \(sliderValue)")
+          var roundedValue: Int = Int(sliderValue.rounded())
+          Text("The value is: \(roundedValue)")
         })
     }
   }
