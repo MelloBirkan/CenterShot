@@ -85,11 +85,11 @@ struct HitMeButtonView: View {
             Color("ButtonColor")
             LinearGradient(colors: [Color.white.opacity(0.3), Color.clear], startPoint: .top, endPoint: .bottom)
           }
-            .clipShape(RoundedRectangle(cornerRadius: 21))
+            .clipShape(RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius))
         )
         .overlay(
-          RoundedRectangle(cornerRadius: 21)
-            .strokeBorder(Color.white, lineWidth: 2)
+          RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+            .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
         )
         .bold()
         .font(.title3)
