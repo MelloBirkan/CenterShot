@@ -59,6 +59,21 @@ struct RoundedRectTextView: View {
   }
 }
 
+struct RoundedTextView: View {
+  var number: String
+  
+  var body: some View {
+    Text(number)
+      .font(.title3)
+      .foregroundColor(Color("TextColor"))
+      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+      .overlay(
+        Circle()
+          .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
+      )
+  }
+}
+
     
     struct PreviewView: View {
       var body: some View {
@@ -66,6 +81,7 @@ struct RoundedRectTextView: View {
           RoundedImageViewStroked(systemName: "list.dash")
           RoundedImageViewFilled(systemName: "arrow.counterclockwise")
           RoundedRectTextView(number: "11")
+          RoundedTextView(number: "1")
         }
       }
     }
