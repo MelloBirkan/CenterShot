@@ -8,8 +8,59 @@
 import SwiftUI
 
 struct LeaderboardView: View {
+  @Binding var leaderboardIsSHowing: Bool
   var body: some View {
-    RowView(index: 1, score: 10, date: Date())
+    ZStack {
+      Color("BackgroundColor").ignoresSafeArea()
+      VStack(spacing: 10) {
+        HeaderView(leaderboardIsSHowing: $leaderboardIsSHowing)
+        LabelView()
+        RowView(index: 1, score: 10, date: Date())
+      }
+    }
+  }
+}
+
+struct HeaderView: View {
+  @Binding var leaderboardIsSHowing: Bool
+  @Environment(\.verticalSizeClass) var verticalSizeClass
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass
+  
+  var body: some View {
+    ZStack {
+      HStack {
+        BigBoldText(text: "Leaderborad")
+        if verticalSizeClass == .regular && horizontalSizeClass == .compact {
+          Spacer()
+        }
+      }
+      HStack {
+        Spacer()
+        Button {
+          leaderboardIsSHowing = false
+        } label: {
+          RoundedImageViewFilled(systemName: "xmark")
+        }
+      }
+    }
+    .padding(.horizontal)
+  }
+}
+
+struct LabelView: View {
+  var body: some View {
+    HStack {
+      Spacer()
+        .frame(width: Constants.General.roundedViewLength)
+      Spacer()
+      LabelText(text: "Score")
+        .frame(width: Constants.Leaderboard.scoreColumnWidth)
+      Spacer()
+      LabelText(text: "Date")
+        .frame(width: Constants.Leaderboard.dateColumnWidth)
+    }
+    .padding(.horizontal)
+    .frame(maxWidth: Constants.Leaderboard.maxRowWidth)
   }
 }
 
@@ -20,7 +71,7 @@ struct RowView: View {
   
   var body: some View {
     HStack {
-     RoundedTextView(number: String(index))
+      RoundedTextView(number: String(index))
       Spacer()
       ScoreText(score: score)
         .frame(width: Constants.Leaderboard.scoreColumnWidth)
@@ -39,5 +90,5 @@ struct RowView: View {
 
 
 #Preview {
-  LeaderboardView()
+  LeaderboardView(leaderboardIsSHowing: Binding.constant(false))
 }
