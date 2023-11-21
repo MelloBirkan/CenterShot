@@ -9,13 +9,22 @@ import SwiftUI
 
 struct LeaderboardView: View {
   @Binding var leaderboardIsSHowing: Bool
+  @Binding var game: Game
+  
   var body: some View {
     ZStack {
       Color("BackgroundColor").ignoresSafeArea()
       VStack(spacing: 10) {
         HeaderView(leaderboardIsSHowing: $leaderboardIsSHowing)
         LabelView()
-        RowView(index: 1, score: 10, date: Date())
+        ScrollView {
+          VStack(spacing: 10) {
+            ForEach(game.leaderboardEntries.indices, id: \.self) { index in
+              let leaderboardEntry = game.leaderboardEntries[index]
+              RowView(index: index + 1, score: leaderboardEntry.score, date: leaderboardEntry.date)
+            }
+          }
+        }
       }
     }
   }
@@ -43,7 +52,7 @@ struct HeaderView: View {
         }
       }
     }
-    .padding(.horizontal)
+    .padding([.horizontal, .top])
   }
 }
 
@@ -90,5 +99,5 @@ struct RowView: View {
 
 
 #Preview {
-  LeaderboardView(leaderboardIsSHowing: Binding.constant(false))
+  LeaderboardView(leaderboardIsSHowing: Binding.constant(false), game: Binding.constant(Game(loadTestData: true)))
 }
